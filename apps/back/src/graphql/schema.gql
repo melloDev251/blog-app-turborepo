@@ -57,7 +57,8 @@ type AuthPayload {
 }
 
 type Query {
-  posts: [Post!]!
+  posts(skip: Float, take: Float): [Post!]!
+  postsCount: Int!
   post(id: Int!): Post!
   user(id: Int!): User!
   comment(id: Int!): CommentEntity!

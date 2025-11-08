@@ -8,7 +8,7 @@ export const fetchGraphQL = async (query: string, variables = {}) => {
     },
     body: JSON.stringify({
       query,
-      variables,
+      variables,  
     }),
   });
 
