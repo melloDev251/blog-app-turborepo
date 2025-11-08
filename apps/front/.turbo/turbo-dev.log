@@ -5,7 +5,13 @@
 
 [1G[0K   [1m[38;2;173;127;168m▲ Next.js 16.0.1[39m[22m (Turbopack)
    - Local:        http://localhost:3000
-   - Network:      http://10.168.195.72:3000
+   - Network:      http://10.39.94.72:3000
+   - Experiments (use with caution):
+     [1m✓[22m turbopackFileSystemCacheForDev
 
  [32m[1m✓[22m[39m Starting...
- [32m[1m✓[22m[39m Ready in 1785ms
+ [32m[1m✓[22m[39m Ready in 1863ms
+ GET /blog/tondeo-acerbitas-curo-repellendus-adfero-atrocitas-tutamen-alioqui-suffragium-autus/64 [33m404[39m in 3.6s[2m (compile: 3.2s, render: 434ms)[22m
+ [37m[1m○[22m[39m Compiling / ...
+ GET / [32m200[39m in 7.8s[2m (compile: 3.4s, render: 4.5s)[22m
+ GET / [32m200[39m in 3.4s[2m (compile: 20ms, render: 3.4s)[22m
