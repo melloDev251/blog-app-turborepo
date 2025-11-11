@@ -32,8 +32,8 @@ export class PostResolver {
     return await this.postService.count();
   }
 
-  @Query(() => Post, { name: 'post' })
-  findOne(@Args('id', { type: () => Int }) id: number) {
+  @Query(() => Post)
+  getPostById(@Args('id', { type: () => Int }) id: number) {
     return this.postService.findOne(id);
   }
 
