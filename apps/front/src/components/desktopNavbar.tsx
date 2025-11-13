@@ -38,7 +38,7 @@ const DesktopNavbar = (props: Props) => {
         }
       )}
     >
-      <div className="flex items-center px-4 py-4 container">
+      <div className="flex items-center px-4 py-4">
         {props.children}
       </div>
       <hr className="border-b border-gray-100 opacity-25 " />

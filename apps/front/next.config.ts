@@ -4,7 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
 
   experimental: {
-    turbopackFileSystemCacheForDev: true,
+    turbopackFileSystemCacheForDev: false,
+    optimizeCss: false, // Désactive l'optimisation CSS si problème
   },
 
   images: {
