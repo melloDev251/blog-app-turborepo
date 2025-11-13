@@ -13,199 +13,84 @@
  [32m[1m✓[22m[39m Starting...
  [32m[1m✓[22m[39m Ready in 2.8s
  [37m[1m○[22m[39m Compiling / ...
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [31m[1m⨯[22m[39m TypeError: fetch failed
-    at async fetchGraphQL (src/lib/fetchGraphQL.ts:4:20)
-    at async fetchPosts (src/lib/actions/postActions.ts:16:16)
-    at async Home (src/app/page.tsx:13:33)
-[0m [90m 2 |[39m
- [90m 3 |[39m [36mexport[39m [36mconst[39m fetchGraphQL [33m=[39m [36masync[39m (query[33m:[39m string[33m,[39m variables [33m=[39m {}) [33m=>[39m {
-[31m[1m>[22m[39m[90m 4 |[39m   [36mconst[39m response [33m=[39m [36mawait[39m fetch([32m`${BACKEND_URL}/graphql`[39m[33m,[39m {
- [90m   |[39m                    [31m[1m^[22m[39m
- [90m 5 |[39m     method[33m:[39m [32m"POST"[39m[33m,[39m
- [90m 6 |[39m     headers[33m:[39m {
- [90m 7 |[39m       [32m"Content-Type"[39m[33m:[39m [32m"application/json"[39m[33m,[39m[0m {
-  digest: [32m'3816266600'[39m,
-  [cause]: AggregateError: 
-      at [3mignore-listed frames[23m {
-    code: [32m'ECONNREFUSED'[39m
+ { session: [1mnull[22m }
+ GET / [32m200[39m in 5.8s[2m (compile: 4.9s, render: 950ms)[22m
+ GET /auth/signin [32m200[39m in 3.4s[2m (compile: 3.1s, render: 329ms)[22m
+ {
+  session: {
+    user: { id: [33m32[39m, name: [32m'test'[39m, avatar: [1mnull[22m },
+    accessToken: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMyLCJpYXQiOjE3NjMwMzU3MzMsImV4cCI6MTc2MzY0MDUzM30.wp1xmFTgpef6TaC5Xs_BdUvBb0XdvjiTbC0oW9RVHdk'[39m,
+    iat: [33m1763035733[39m,
+    exp: [33m1763640533[39m
   }
 }
- GET / [31m500[39m in 7.6s[2m (compile: 6.7s, render: 962ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
+ GET / [32m200[39m in 464ms[2m (compile: 8ms, render: 456ms)[22m
+ POST /auth/signin [34m303[39m in 948ms[2m (compile: 19ms, render: 929ms)[22m
+ [32m[1m✓[22m[39m Compiled in 471ms
+ [32m[1m✓[22m[39m Compiled in 1458ms
+ [32m[1m✓[22m[39m Compiled in 622ms
+ {
+  session: {
+    user: { id: [33m32[39m, name: [32m'test'[39m, avatar: [1mnull[22m },
+    accessToken: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMyLCJpYXQiOjE3NjMwMzU3MzMsImV4cCI6MTc2MzY0MDUzM30.wp1xmFTgpef6TaC5Xs_BdUvBb0XdvjiTbC0oW9RVHdk'[39m,
+    iat: [33m1763035733[39m,
+    exp: [33m1763640533[39m
+  }
+}
+ GET / [32m200[39m in 735ms[2m (compile: 16ms, render: 719ms)[22m
+ GET /auth/signin [32m200[39m in 508ms[2m (compile: 298ms, render: 210ms)[22m
+ POST /auth/signin [32m200[39m in 184ms[2m (compile: 12ms, render: 171ms)[22m
+ GET /auth/signup [32m200[39m in 2.5s[2m (compile: 2.3s, render: 195ms)[22m
+ POST /auth/signup [32m200[39m in 70ms[2m (compile: 27ms, render: 43ms)[22m
+ GET /auth/signin [32m200[39m in 378ms[2m (compile: 18ms, render: 360ms)[22m
+GraphQL errors: [
+  {
+    message: [32m'Utilisateur et mot de passe inconnue'[39m,
+    locations: [ [36m[Object][39m ],
+    path: [ [32m'signIn'[39m ],
+    extensions: {
+      code: [32m'UNAUTHENTICATED'[39m,
+      stacktrace: [36m[Array][39m,
+      originalError: [36m[Object][39m
+    }
+  }
+]
+ [31m[1m⨯[22m[39m Error: Failed to fetch the data from GraphQL
+    at fetchGraphQL (src/lib/fetchGraphQL.ts:18:11)
+    at async signIn (src/lib/actions/auth.ts:54:16)
+[0m [90m 16 |[39m   [36mif[39m (result[33m.[39merrors) {
+ [90m 17 |[39m     console[33m.[39merror([32m"GraphQL errors:"[39m[33m,[39m result[33m.[39merrors)[33m;[39m
+[31m[1m>[22m[39m[90m 18 |[39m     [36mthrow[39m [36mnew[39m [33mError[39m([32m"Failed to fetch the data from GraphQL"[39m)[33m;[39m
+ [90m    |[39m           [31m[1m^[22m[39m
+ [90m 19 |[39m   }
+ [90m 20 |[39m
+ [90m 21 |[39m   [36mreturn[39m result[33m.[39mdata[33m;[39m[0m {
+  digest: [32m'2988595257'[39m
+}
+ POST /auth/signin [31m500[39m in 1624ms[2m (compile: 19ms, render: 1605ms)[22m
+ GET /auth/signin [32m200[39m in 269ms[2m (compile: 27ms, render: 241ms)[22m
+ {
+  session: {
+    user: { id: [33m32[39m, name: [32m'test'[39m, avatar: [1mnull[22m },
+    accessToken: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMyLCJpYXQiOjE3NjMwMzY2ODUsImV4cCI6MTc2MzY0MTQ4NX0.6r9Y0vxmtKsqdesCrqLsLpgU8nvjL3szIgdaH7bB3G0'[39m,
+    iat: [33m1763036685[39m,
+    exp: [33m1763641485[39m
+  }
+}
+ GET / [32m200[39m in 282ms[2m (compile: 8ms, render: 274ms)[22m
+ POST /auth/signin [34m303[39m in 770ms[2m (compile: 24ms, render: 746ms)[22m
+ [32m[1m✓[22m[39m Compiled in 431ms
 
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- { session: [1mnull[22m }
- GET / [32m200[39m in 1304ms[2m (compile: 73ms, render: 1231ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
+thread 'tokio-runtime-worker' (17407) panicked at /build/turbopack/crates/turbo-tasks-backend/src/backend/operation/mod.rs:452:9:
+Item already exists
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+ [32m[1m✓[22m[39m Compiled in 324ms
+ {
+  session: {
+    user: { id: [33m32[39m, name: [32m'test'[39m, avatar: [1mnull[22m },
+    accessToken: [32m'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMyLCJpYXQiOjE3NjMwMzY2ODUsImV4cCI6MTc2MzY0MTQ4NX0.6r9Y0vxmtKsqdesCrqLsLpgU8nvjL3szIgdaH7bB3G0'[39m,
+    iat: [33m1763036685[39m,
+    exp: [33m1763641485[39m
+  }
+}
+ GET / [32m200[39m in 574ms[2m (compile: 16ms, render: 558ms)[22m
