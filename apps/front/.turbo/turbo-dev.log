@@ -5,54 +5,14 @@
 
 [1G[0K   [1m[38;2;173;127;168m▲ Next.js 16.0.1[39m[22m (Turbopack)
    - Local:        http://localhost:3000
+   - Network:      http://10.39.94.72:3000
+   - Environments: .env
    - Experiments (use with caution):
      [1m✓[22m turbopackFileSystemCacheForDev
 
  [32m[1m✓[22m[39m Starting...
- [33m[1m⚠[22m[39m Turbopack's filesystem cache has been deleted because we previously detected an internal error in Turbopack. Builds or page loads may be slower as a result.
- [32m[1m✓[22m[39m Ready in 1797ms
- [37m[1m○[22m[39m Compiling /auth/signin ...
- [31m[1m⨯[22m[39m ./apps/front/src/app/auth/signin/_components/signInForm.tsx:2:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/components/SubmitButton'[39m
-[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mSubmitButton[39m [36mfrom[39m [32m"@/components/SubmitButton"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 3 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m
- [90m 4 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m
- [90m 5 |[39m [36mimport[39m { signIn } [36mfrom[39m [32m"@/lib/actions/auth"[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/components/SubmitButton' inside of [project]/apps/front
-
-
-Import trace:
-  Server Component:
-    ./apps/front/src/app/auth/signin/_components/signInForm.tsx
-    ./apps/front/src/app/auth/signin/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-
-./apps/front/src/app/auth/signin/_components/signInForm.tsx:2:1
-[1m[31mModule not found[39m[22m: Can't resolve [32m'@/components/SubmitButton'[39m
-[0m [90m 1 |[39m [32m"use client"[39m[33m;[39m
-[31m[1m>[22m[39m[90m 2 |[39m [36mimport[39m [33mSubmitButton[39m [36mfrom[39m [32m"@/components/SubmitButton"[39m[33m;[39m
- [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
- [90m 3 |[39m [36mimport[39m { [33mInput[39m } [36mfrom[39m [32m"@/components/ui/input"[39m[33m;[39m
- [90m 4 |[39m [36mimport[39m { [33mLabel[39m } [36mfrom[39m [32m"@/components/ui/label"[39m[33m;[39m
- [90m 5 |[39m [36mimport[39m { signIn } [36mfrom[39m [32m"@/lib/actions/auth"[39m[33m;[39m[0m
-
-Import map: aliased to relative './src/components/SubmitButton' inside of [project]/apps/front
-
-
-Import trace:
-  Server Component:
-    ./apps/front/src/app/auth/signin/_components/signInForm.tsx
-    ./apps/front/src/app/auth/signin/page.tsx
-
-https://nextjs.org/docs/messages/module-not-found
-
-
+ [32m[1m✓[22m[39m Ready in 2.8s
+ [37m[1m○[22m[39m Compiling / ...
  [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
 Error while requesting resource
 There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
@@ -97,1267 +57,155 @@ Import trace:
     ./apps/front/src/app/layout.tsx
 
 
- GET /auth/signin [31m500[39m in 37.1s[2m (compile: 36.9s, render: 210ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [32m[1m✓[22m[39m Compiled in 543ms
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signin [32m200[39m in 1472ms[2m (compile: 911ms, render: 561ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signup [32m200[39m in 988ms[2m (compile: 882ms, render: 107ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signin [32m200[39m in 97ms[2m (compile: 7ms, render: 90ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [32m[1m✓[22m[39m Compiled in 227ms
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- POST /auth/signin [32m200[39m in 332ms[2m (compile: 244ms, render: 87ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signup [32m200[39m in 100ms[2m (compile: 10ms, render: 90ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signin [32m200[39m in 263ms[2m (compile: 11ms, render: 252ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [32m[1m✓[22m[39m Compiled in 289ms
- [32m[1m✓[22m[39m Compiled in 246ms
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- POST /auth/signin [32m200[39m in 337ms[2m (compile: 264ms, render: 72ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signup [32m200[39m in 111ms[2m (compile: 11ms, render: 100ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- POST /auth/signup [32m200[39m in 88ms[2m (compile: 13ms, render: 75ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signin [32m200[39m in 261ms[2m (compile: 8ms, render: 253ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [32m[1m✓[22m[39m Compiled in 186ms
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- GET /auth/signin [32m200[39m in 705ms[2m (compile: 548ms, render: 157ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [32m[1m✓[22m[39m Compiled in 0ms
- GET /auth/signin [32m200[39m in 78ms[2m (compile: 11ms, render: 67ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- POST /auth/signin [32m200[39m in 122ms[2m (compile: 9ms, render: 113ms)[22m
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-Error while requesting resource
-There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_a71539c9.module.css
-    [next]/internal/font/google/geist_a71539c9.js
-    ./apps/front/src/app/layout.tsx
-
-
- [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-[32mnext/font:[39m warning:
-Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
-
-Import trace:
-  Server Component:
-    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
-    [next]/internal/font/google/geist_mono_8d43a2aa.js
-    ./apps/front/src/app/layout.tsx
-
-
- [31m[1m⨯[22m[39m ReferenceError: createSession is not defined
-    at signIn (src/lib/actions/auth.ts:67:3)
-[0m [90m 65 |[39m
- [90m 66 |[39m   [90m// Create a session[39m
-[31m[1m>[22m[39m[90m 67 |[39m   [36mawait[39m createSession({
- [90m    |[39m   [31m[1m^[22m[39m
- [90m 68 |[39m     user[33m:[39m {
- [90m 69 |[39m       id[33m:[39m data[33m.[39msignIn[33m.[39mid[33m,[39m
- [90m 70 |[39m       name[33m:[39m data[33m.[39msignIn[33m.[39mname[33m,[39m[0m {
-  digest: [32m'4022564549'[39m
+ [31m[1m⨯[22m[39m TypeError: fetch failed
+    at async fetchGraphQL (src/lib/fetchGraphQL.ts:4:20)
+    at async fetchPosts (src/lib/actions/postActions.ts:16:16)
+    at async Home (src/app/page.tsx:13:33)
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mexport[39m [36mconst[39m fetchGraphQL [33m=[39m [36masync[39m (query[33m:[39m string[33m,[39m variables [33m=[39m {}) [33m=>[39m {
+[31m[1m>[22m[39m[90m 4 |[39m   [36mconst[39m response [33m=[39m [36mawait[39m fetch([32m`${BACKEND_URL}/graphql`[39m[33m,[39m {
+ [90m   |[39m                    [31m[1m^[22m[39m
+ [90m 5 |[39m     method[33m:[39m [32m"POST"[39m[33m,[39m
+ [90m 6 |[39m     headers[33m:[39m {
+ [90m 7 |[39m       [32m"Content-Type"[39m[33m:[39m [32m"application/json"[39m[33m,[39m[0m {
+  digest: [32m'3816266600'[39m,
+  [cause]: AggregateError: 
+      at [3mignore-listed frames[23m {
+    code: [32m'ECONNREFUSED'[39m
+  }
 }
- POST /auth/signin [31m500[39m in 1636ms[2m (compile: 38ms, render: 1598ms)[22m
+ GET / [31m500[39m in 7.6s[2m (compile: 6.7s, render: 962ms)[22m
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
+[32mnext/font:[39m warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+[32mnext/font:[39m warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
+[32mnext/font:[39m warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+[32mnext/font:[39m warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./apps/front/src/app/layout.tsx
+
+
+ { session: [1mnull[22m }
+ GET / [32m200[39m in 1304ms[2m (compile: 73ms, render: 1231ms)[22m
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap[39m
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting [32mhttps://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap[39m
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_a71539c9.module.css
+[32mnext/font:[39m warning:
+Failed to download `Geist` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_a71539c9.module.css
+    [next]/internal/font/google/geist_a71539c9.js
+    ./apps/front/src/app/layout.tsx
+
+
+ [33m[1m⚠[22m[39m [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+[32mnext/font:[39m warning:
+Failed to download `Geist Mono` from Google Fonts. Using fallback font instead.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/geist_mono_8d43a2aa.module.css
+    [next]/internal/font/google/geist_mono_8d43a2aa.js
+    ./apps/front/src/app/layout.tsx
+
+
