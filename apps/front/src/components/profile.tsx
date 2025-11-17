@@ -29,9 +29,9 @@ const Profile = ({ user }: Props) => {
         </Avatar>
       </PopoverTrigger>
       <PopoverContent>
-        <div className="flex justify-center items-center gap-3">
-          <UserIcon className="w-4" />
-          <p>{user.name}</p>
+        <div className="grid grid-cols-5 gap-3 items-center my-2 py-2">
+          <UserIcon className="w-4 justify-self-end" />
+          <p className="col-span-4 font-bold text-sky-400">{user.name}</p>
         </div>
         <div className="*:grid *:grid-cols-5 *:gap-3 *:items-center *:my-2 *:py-2 [&>*>span]:col-span-4 [&>*:hover]:bg-sky-500 [&>*:hover]:text-white *:transition *:rounded-md [&>*>*:nth-child(1)]:justify-self-end ">
           <a href="/api/auth/signout">
