@@ -1,0 +1,56 @@
+"use client";
+import { getPostLikeData, likePost, unLikePost } from "@/lib/actions/like";
+import { SessionUser } from "@/lib/session";
+import { HeartIcon } from "@heroicons/react/24/outline";
+import { HeartIcon as SolidHeartIcon } from "@heroicons/react/20/solid";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { toast } from "sonner";
+
+type Props = {
+  postId: number;
+  user?: SessionUser;
+};
+const Like = (props: Props) => {
+  const { data, refetch: refetchPostLikeData } = useQuery({
+    queryKey: ["GET_POST_LIKE_DATA", props.postId, props.user?.id],
+    queryFn: async () => await getPostLikeData(props.postId, props.user),
+  });
+
+  const likeMutation = useMutation({
+    mutationFn: () => likePost(props.postId),
+    onSuccess: () => refetchPostLikeData(),
+  });
+
+  const unlikeMutation = useMutation({
+    mutationFn: () => unLikePost(props.postId),
+    onSuccess: () => refetchPostLikeData(),
+  });
+
+  
+  const handleLikeClick = () => {
+    // Vérifier si l'utilisateur n'est pas connecté
+    if (!props.user) {
+      toast.error("Please sign in to like this post");
+      return;
+    }
+
+    // Si l'utilisateur est connecté, liker le post
+    likeMutation.mutate();
+  };
+  return (
+    <div className="mt-3 flex items-center justify-start gap-2">
+      {data?.userLikedPost ? (
+        <button onClick={() => unlikeMutation.mutate()}>
+          <SolidHeartIcon className="w-6 text-rose-600" />
+        </button>
+      ) : (
+        <button onClick={handleLikeClick}>
+          <HeartIcon className="w-6" />
+        </button>
+      )}
+      <p className="text-slate-600">{data?.likeCount ?? 0}</p>
+    </div>
+  );
+};
+
+export default Like;

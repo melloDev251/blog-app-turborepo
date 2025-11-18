@@ -20,11 +20,11 @@ export class AuthService {
       where: { email },
     });
     if (!user || !user.password)
-      throw new UnauthorizedException('Utilisateur inconnue');
+      throw new UnauthorizedException('User Not Found');
 
     const passwordMatched = await verify(user.password, password);
     if (!passwordMatched || !user.password)
-      throw new UnauthorizedException('Utilisateur et mot de passe inconnue');
+      throw new UnauthorizedException('Invalid Credentials');
 
     return user;
   }
@@ -49,7 +49,7 @@ export class AuthService {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
     });
-    if (!user) throw new UnauthorizedException('Utilisateur inconnue');
+    if (!user) throw new UnauthorizedException('User Not Found');
     const currentUser = { id: user.id };
     return currentUser;
   }

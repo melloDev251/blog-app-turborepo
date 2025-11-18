@@ -14,7 +14,7 @@ export class UserService {
       where: { email: user.email },
     });
     if (existingUser) {
-      throw new BadRequestException('Email déja utiliser');
+      throw new BadRequestException('Email Already Used');
     }
     return await this.prisma.user.create({
       data: {

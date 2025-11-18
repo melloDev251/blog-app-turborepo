@@ -3,7 +3,7 @@ import Image from "next/image";
 import SanitizedContent from "./_components/sanitizedContent";
 import Comments from "./_components/comments";
 import { getSession } from "@/lib/session";
-// import Like from "./_components/like";
+import Like from "./_components/like";
 
 type Props = {
   params: {
@@ -33,10 +33,9 @@ const PostPage = async ({ params }: Props) => {
 
       <SanitizedContent content={post.content} />
 
-      {/* <Like postId={post.id} user={session?.user} /> */}
+      <Like user={session?.user} postId={post.id}  />
       {/* Todo: Put the Post Comments Here */}
       <Comments user={session?.user} postId={post.id} />
-      {/* user={session?.user} it's just upstairs */}
     </main>
   );
 };

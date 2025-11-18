@@ -1,35 +1,57 @@
-import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
+import { Resolver, Query, Mutation, Args, Int, Context } from '@nestjs/graphql';
 import { LikeService } from './like.service';
 import { Like } from './entities/like.entity';
-import { CreateLikeInput } from './dto/create-like.input';
-import { UpdateLikeInput } from './dto/update-like.input';
+import { UseGuards } from '@nestjs/common';
+import { JwtAuthGuard } from 'src/auth/guard/jwt-auth/jwt-auth.guard';
 
 @Resolver(() => Like)
 export class LikeResolver {
   constructor(private readonly likeService: LikeService) {}
 
-  @Mutation(() => Like)
-  createLike(@Args('createLikeInput') createLikeInput: CreateLikeInput) {
-    return this.likeService.create(createLikeInput);
+  @UseGuards(JwtAuthGuard)
+  @Mutation(() => Boolean)
+  async likePost(
+    @Context() context,
+    @Args('postId', { type: () => Int! }) postId: number,
+  ) {
+    const userId = context.req.user.id;
+    return await this.likeService.likePost({ postId, userId });
   }
 
-  @Query(() => [Like], { name: 'like' })
-  findAll() {
-    return this.likeService.findAll();
+  @UseGuards(JwtAuthGuard)
+  @Mutation(() => Boolean)
+  async unlikePost(
+    @Context() context,
+    @Args('postId', { type: () => Int! }) postId: number,
+  ) {
+    const userId = context.req.user.id;
+    return await this.likeService.unlikePost({ postId, userId });
   }
 
-  @Query(() => Like, { name: 'like' })
-  findOne(@Args('id', { type: () => Int }) id: number) {
-    return this.likeService.findOne(id);
+  @Query(() => Int)
+  postLikesCount(@Args('postId', { type: () => Int! }) postId: number) {
+    return this.likeService.getPostLikesCount(postId);
   }
 
-  @Mutation(() => Like)
-  updateLike(@Args('updateLikeInput') updateLikeInput: UpdateLikeInput) {
-    return this.likeService.update(updateLikeInput.id, updateLikeInput);
-  }
+  // @Query(() => Object) // ou créez un type spécifique
+  // async getPostLikeData(@Args('postId', { type: () => Int! }) postId: number) {
+  //   const likeCount = await this.likeService.getPostLikesCount(postId);
 
-  @Mutation(() => Like)
-  removeLike(@Args('id', { type: () => Int }) id: number) {
-    return this.likeService.remove(id);
+  //   // Pour les utilisateurs non connectés, userLikedPost est toujours false
+  //   return {
+  //     likeCount,
+  //     userLikedPost: false,
+  //   };
+  // }
+
+  @UseGuards(JwtAuthGuard)
+  @Query(() => Boolean)
+  userLikedPost(
+    @Context() context,
+    @Args('postId', { type: () => Int! }) postId: number,
+  ) {
+    const userId = context.req.user.id;
+    return this.likeService.userLikedPost({ postId, userId });
   }
 }

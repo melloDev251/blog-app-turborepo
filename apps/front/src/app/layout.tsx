@@ -5,7 +5,7 @@ import Navbar from "@/components/navbar";
 import NavbarContainer from "@/components/navbarContainer";
 import Providers from "./providers";
 import localFont from "next/font/local";
-import { Toaster } from "@/components/ui/sonner"
+import { Toaster } from "@/components/ui/sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,7 +38,13 @@ export default function RootLayout({
             <Navbar />
           </NavbarContainer>
           {children}
-          <Toaster />
+          <Toaster
+            expand={false}
+            closeButton
+            richColors
+            theme="light"
+            position="top-center"
+          />
         </Providers>
       </body>
     </html>
