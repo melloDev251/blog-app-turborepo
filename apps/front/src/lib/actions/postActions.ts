@@ -1,9 +1,16 @@
 "use server";
 import { print } from "graphql";
 import { authFetchGraphQL, fetchGraphQL } from "../fetchGraphQL";
-import { GET_POST_BY_ID, GET_POSTS, GET_USER_POSTS } from "../gqlQueries";
+import {
+  CREATE_POST_MUTATION,
+  GET_POST_BY_ID,
+  GET_POSTS,
+  GET_USER_POSTS,
+} from "../gqlQueries";
 import { Post } from "../types/modelTypes";
 import { transformTakeSkip } from "../helpers";
+import { PostFormState } from "../types/formState";
+import { PostFormSchema } from "../zodSchemas/postFormSchema";
 
 export const fetchPosts = async ({
   page,
@@ -15,7 +22,7 @@ export const fetchPosts = async ({
   const { skip, take } = transformTakeSkip({ page, pageSize });
   const data = await fetchGraphQL(print(GET_POSTS), { skip, take });
   //   console.log({ data });
-  return {posts: data.posts as Post[], totalPosts: data.postsCount as number};
+  return { posts: data.posts as Post[], totalPosts: data.postsCount as number };
 };
 
 export const fetchPostById = async (id: number) => {
@@ -32,13 +39,57 @@ export async function fetchUserPosts({
   pageSize: number;
 }) {
   const { take, skip } = transformTakeSkip({ page, pageSize });
+  // const orderBy = { createdAt: "desc" }; // Example initialization
   const data = await authFetchGraphQL(print(GET_USER_POSTS), {
     take,
     skip,
+    // orderBy,
   });
 
   return {
     posts: data.getUserPosts as Post[],
     totalPosts: data.userPostCount as number,
+  };
+}
+
+export async function saveNewPost(
+  state: PostFormState,
+  formData: FormData
+): Promise<PostFormState> {
+  // Récupérer published directement depuis FormData
+  const published = formData.get("published") === "on";
+
+  const validatedFields = PostFormSchema.safeParse(
+    Object.fromEntries(formData.entries())
+  );
+
+  if (!validatedFields.success)
+    return {
+      data: Object.fromEntries(formData.entries()),
+      errors: validatedFields.error.flatten().fieldErrors,
+    };
+
+  // Todo:Upload Thumbnail to supabase
+  const thumbnailUrl = "";
+  // if (validatedFields.data.thumbnail)
+  //   thumbnailUrl = await uploadThumbnail(validatedFields.data.thumbnail);
+
+  // Extraire seulement les champs nécessaires pour GraphQL
+  const { postId, ...graphQLInput } = validatedFields.data;
+
+  // Todo: call garphql api
+  const data = await authFetchGraphQL(print(CREATE_POST_MUTATION), {
+    input: {
+      // ...validatedFields.data,
+      ...graphQLInput, // Sans postId
+      thumbnail: thumbnailUrl,
+      published: published, // Utiliser la valeur récupérée directement
+    },
+  });
+
+  if (data) return { message: "Success! New Post Saved", ok: true };
+  return {
+    message: "Oops, Something Went Wrong",
+    data: Object.fromEntries(formData.entries()),
   };
 }

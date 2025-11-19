@@ -8,8 +8,30 @@ import { DEFAULT_PAGE_SIZE } from 'src/constants';
 export class PostService {
   constructor(private prisma: PrismaService) {}
 
-  create(createPostInput: CreatePostInput) {
-    return 'This action adds a new post';
+  async create({
+    createPostInput,
+    authorId,
+  }: {
+    createPostInput: CreatePostInput;
+    authorId: number;
+  }) {
+    return await this.prisma.post.create({
+      data: {
+        ...createPostInput,
+        thumbnail: createPostInput.thumbnail ?? '',
+        author: {
+          connect: {
+            id: authorId,
+          },
+        },
+        tags: {
+          connectOrCreate: createPostInput.tags.map((tag) => ({
+            where: { name: tag },
+            create: { name: tag },
+          })),
+        },
+      },
+    });
   }
 
   async findAll({
@@ -48,6 +70,9 @@ export class PostService {
     take: number;
   }) {
     return await this.prisma.post.findMany({
+      orderBy: {
+        createdAt: 'desc', // 'desc' pour du plus récent au plus ancien
+      },
       where: {
         author: {
           id: userId,

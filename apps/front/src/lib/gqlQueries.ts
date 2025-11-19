@@ -121,3 +121,25 @@ export const GET_USER_POSTS = gql`
     userPostCount
   }
 `;
+
+export const CREATE_POST_MUTATION = gql`
+  mutation CreatePostMutation($input: CreatePostInput!) {
+    createPost(createPostInput: $input) {
+      id
+    }
+  }
+`;
+
+export const UPDATE_POST_MUTATION = gql`
+  mutation UpdatePost($input: UpdatePostInput!) {
+    updatePost(updatePostInput: $input) {
+      id
+    }
+  }
+`;
+
+export const DELETE_POST_MUTATION = gql`
+  mutation DeletePost($postId: Int!) {
+    deletePost(postId: $postId)
+  }
+`;

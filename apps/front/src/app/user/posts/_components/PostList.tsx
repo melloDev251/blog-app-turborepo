@@ -21,7 +21,7 @@ const PostList = ({ posts, currentPage, totalPages }: Props) => {
           <div></div>
         </div>
       </div>
-      <div className="mt-37"></div>
+      {/* <div className="mt-37"></div> */}
 
       {posts.map((post) => (
         <PostListItem post={post} key={post.id} />

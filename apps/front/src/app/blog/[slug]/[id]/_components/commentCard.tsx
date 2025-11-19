@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { formatDate } from "@/lib/dateUtils";
 import { CommentEntity } from "@/lib/types/modelTypes";
 import { UserIcon } from "@heroicons/react/20/solid";
 
@@ -17,13 +18,7 @@ const CommentCard = ({ comment }: Props) => {
         </Avatar>
         <p>{comment.author.name} | </p>
         <p>
-          {new Date(comment.createdAt).toLocaleDateString("fr-FR", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-            hour: "2-digit",
-            minute: "2-digit",
-          })}
+          {formatDate(comment.createdAt)}
         </p>
       </div>
       <p className="mt-4">{comment.content}</p>

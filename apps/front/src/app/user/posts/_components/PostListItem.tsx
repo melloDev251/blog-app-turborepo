@@ -2,6 +2,7 @@ import { Post } from "@/lib/types/modelTypes";
 import { CheckIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import PostActions from "./postActions";
+import { formatDateShort } from "@/lib/dateUtils";
 type Props = {
   post: Post;
 };
@@ -19,7 +20,7 @@ const PostListItem = ({ post }: Props) => {
       </div>
 
       <p className="flex justify-center items-center">
-        {new Date(post.createdAt).toLocaleDateString()}
+        {formatDateShort(post.createdAt)}
       </p>
       <div className="flex justify-center items-center">
         {post.published && <CheckIcon className="w-5" />}

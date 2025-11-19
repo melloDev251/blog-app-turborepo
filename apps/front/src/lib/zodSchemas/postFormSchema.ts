@@ -13,7 +13,7 @@ export const PostFormSchema = z.object({
     .refine((value) => value.split(",").every((tag) => tag.trim() !== ""))
     .transform((value) => value.split(",")),
   thumbnail: z.instanceof(File).optional(),
-  published: z.string().transform((value) => value === "on"),
+  published: z.string().optional().default('off'), // Valeur par défaut
 });
 
 // db,dataScience,web,,

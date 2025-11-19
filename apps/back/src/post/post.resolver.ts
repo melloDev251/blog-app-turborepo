@@ -11,9 +11,15 @@ import { DEFAULT_PAGE_SIZE } from 'src/constants';
 export class PostResolver {
   constructor(private readonly postService: PostService) {}
 
+  @UseGuards(JwtAuthGuard)
   @Mutation(() => Post)
-  createPost(@Args('createPostInput') createPostInput: CreatePostInput) {
-    return this.postService.create(createPostInput);
+  createPost(
+    @Context() context,
+    @Args('createPostInput') createPostInput: CreatePostInput,
+  ) {
+    const authorId = context.req.user.id;
+
+    return this.postService.create({ createPostInput, authorId });
   }
 
   // @UseGuards(JwtAuthGuard)
