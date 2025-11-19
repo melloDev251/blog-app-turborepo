@@ -62,6 +62,8 @@ type Query {
   posts(skip: Float, take: Float): [Post!]!
   postsCount: Int!
   getPostById(id: Int!): Post!
+  getUserPosts(skip: Int, take: Int): [Post!]!
+  userPostCount: Int!
   user(id: Int!): User!
   postCommentCount(postId: Int!): Int!
   getPostComments(postId: Int!, take: Int = 12, skip: Int = 0): [CommentEntity!]!

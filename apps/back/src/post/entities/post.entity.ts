@@ -11,6 +11,7 @@ export class Count {
   @Field(() => Int)
   comments: number;
 }
+
 @ObjectType()
 export class Post {
   @Field(() => Int)

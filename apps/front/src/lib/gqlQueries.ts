@@ -83,7 +83,6 @@ export const POST_LIKES_COUNT = gql`
     postLikesCount(postId: $postId)
   }
 `;
-
 // Votre query existante
 export const POST_LIKES = gql`
   query PostLikeData($postId: Int!) {
@@ -91,27 +90,6 @@ export const POST_LIKES = gql`
     userLikedPost(postId: $postId)
   }
 `;
-
-// export const POST_LIKES = gql`
-//   query PostLikeData($postId: Int!) {
-//     postLikesCount(postId: $postId)
-//     userLikedPost(postId: $postId)
-//   }
-// `;
-
-// // Pour les données publiques (sans authentification)
-// export const POST_LIKES_COUNT = gql`
-//   query PostLikesCount($postId: Int!) {
-//     postLikesCount(postId: $postId)
-//   }
-// `;
-
-// // Pour les données utilisateur (avec authentification)
-// export const USER_LIKED_POST = gql`
-//   query UserLikedPost($postId: Int!) {
-//     userLikedPost(postId: $postId)
-//   }
-// `;
 
 export const LIKE_POST_MUTATION = gql`
   mutation LikePost($postId: Int!) {
@@ -122,5 +100,24 @@ export const LIKE_POST_MUTATION = gql`
 export const UNLIKE_POST_MUTATION = gql`
   mutation UnLikePost($postId: Int!) {
     unlikePost(postId: $postId)
+  }
+`;
+
+export const GET_USER_POSTS = gql`
+  query GetUserPosts($skip: Int, $take: Int) {
+    getUserPosts(skip: $skip, take: $take) {
+      id
+      title
+      slug
+      thumbnail
+      published
+      createdAt
+      content
+      _count {
+        likes
+        comments
+      }
+    }
+    userPostCount
   }
 `;
