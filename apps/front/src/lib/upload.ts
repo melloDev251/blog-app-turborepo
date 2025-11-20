@@ -1,8 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
 export async function uploadThumbnail(image: File) {
-  const supabaseUrl = process.env.SUPABASE_URL!;
-  const supabaseKey = process.env.SUPABASE_API_KEY!;
+  const supabaseUrl =
+    process.env.SUPABASE_URL! || "https://nyacwcdboadtzhdyaerb.supabase.co";
+  const supabaseKey =
+    process.env.SUPABASE_API_KEY! ||
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im55YWN3Y2Rib2FkdHpoZHlhZXJiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjM1ODcyMjksImV4cCI6MjA3OTE2MzIyOX0.6f9YB1U8YSwSh5DOabmiSPkVueVAzUlN2jTYKf9KuOI";
 
   const supabase = createClient(supabaseUrl, supabaseKey);
 

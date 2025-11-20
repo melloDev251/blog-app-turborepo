@@ -11,6 +11,7 @@ import { Post } from "../types/modelTypes";
 import { transformTakeSkip } from "../helpers";
 import { PostFormState } from "../types/formState";
 import { PostFormSchema } from "../zodSchemas/postFormSchema";
+import { uploadThumbnail } from "../upload";
 
 export const fetchPosts = async ({
   page,
@@ -70,9 +71,10 @@ export async function saveNewPost(
     };
 
   // Todo:Upload Thumbnail to supabase
-  const thumbnailUrl = "";
-  // if (validatedFields.data.thumbnail)
-  //   thumbnailUrl = await uploadThumbnail(validatedFields.data.thumbnail);
+  let thumbnailUrl = "";
+  if (validatedFields.data.thumbnail) {
+    thumbnailUrl = await uploadThumbnail(validatedFields.data.thumbnail);
+  }
 
   // Extraire seulement les champs nécessaires pour GraphQL
   const { postId, ...graphQLInput } = validatedFields.data;

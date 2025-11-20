@@ -23,6 +23,8 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
     ],
+    // Alternative plus simple :
+    domains: ["nyacwcdboadtzhdyaerb.supabase.co"],
   },
   reactCompiler: true,
 };

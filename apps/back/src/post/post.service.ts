@@ -41,7 +41,13 @@ export class PostService {
     skip?: number;
     take?: number;
   }) {
-    return await this.prisma.post.findMany({ skip, take });
+    return await this.prisma.post.findMany({
+      orderBy: {
+        createdAt: 'desc', // 'desc' pour du plus récent au plus ancien
+      },
+      skip,
+      take,
+    });
   }
 
   async count() {
