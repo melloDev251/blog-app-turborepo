@@ -47,7 +47,7 @@ const Profile = ({ user }: Props) => {
           </Link>
           <Link href="/user/posts" onClick={handleLinkClick}>
             <ListBulletIcon className="w-4" />
-            <span>Posts</span>
+            <span>My Posts</span>
           </Link>
           <a href="/api/auth/signout" onClick={handleLinkClick}>
             <ArrowRightStartOnRectangleIcon className="w-4" />

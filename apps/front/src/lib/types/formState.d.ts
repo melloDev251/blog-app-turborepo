@@ -39,6 +39,7 @@ export type PostFormState =
         tags?: string;
         published?: string;
         previousThumbnailUrl?: string;
+        // updatedAt?: string;
       };
 
       errors?: {
@@ -50,5 +51,6 @@ export type PostFormState =
       };
       message?: string;
       ok?: boolean;
+      redirectTo?: string; // Added redirectTo property
     }
   | undefined;

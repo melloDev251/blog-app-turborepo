@@ -112,6 +112,7 @@ export const GET_USER_POSTS = gql`
       thumbnail
       published
       createdAt
+      updatedAt
       content
       _count {
         likes

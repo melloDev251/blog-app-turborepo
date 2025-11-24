@@ -18,13 +18,14 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "tmpddpfoickfjtwfnbyo.supabase.co",
+        hostname: "nyacwcdboadtzhdyaerb.supabase.co",
         port: "",
         pathname: "/**",
       },
+      
     ],
     // Alternative plus simple :
-    domains: ["nyacwcdboadtzhdyaerb.supabase.co"],
+    // domains: ["nyacwcdboadtzhdyaerb.supabase.co"],
   },
   reactCompiler: true,
 };

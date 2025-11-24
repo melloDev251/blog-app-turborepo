@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import SubmitButton from "@/components/submitButton";
@@ -8,6 +9,7 @@ import { toast } from "sonner";
 import { PostFormState } from "@/lib/types/formState";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 type Props = {
   state: PostFormState;
@@ -15,20 +17,61 @@ type Props = {
 };
 const UpsertPostForm = ({ state, formAction }: Props) => {
   const [imageUrl, setImageUrl] = useState("");
+  const [isRedirecting, setIsRedirecting] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null); // Référence pour le champ fichier
-  // const { toast } = useToast();
+  const router = useRouter(); // Initialiser le router
+
   useEffect(() => {
-    if (state?.ok) {
-      toast.success("Post has been created.");
-      // Réinitialiser le champ image après succès
+    if (state?.message && state?.redirectTo) {
+      toast.success(state.message);
+      setIsRedirecting(true);
+
+      // Réinitialiser le champ image avant la redirection
+      setImageUrl("");
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
+
+      // Rediriger après un léger délai pour laisser le toast s'afficher
       setTimeout(() => {
-        setImageUrl("");
-        if (fileInputRef.current) {
-          fileInputRef.current.value = "";
-        }
-      }, 0);
+        router.push(state.redirectTo!);
+      }, 100);
+    } else if (state?.message && !state?.redirectTo) {
+      // Gérer les messages sans redirection (pour create par exemple)
+      toast.success(state.message);
+
+      // Réinitialiser seulement les champs sans rediriger
+      setImageUrl("");
+      if (fileInputRef.current) {
+        fileInputRef.current.value = "";
+      }
     }
-  }, [state]);
+  }, [state, router]);
+
+    // Si une redirection est en cours, afficher un indicateur de chargement
+    if (isRedirecting) {
+      return (
+        <div className="flex justify-center items-center min-h-[400px]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto"></div>
+            <p className="mt-4 text-slate-600">Redirection en cours...</p>
+          </div>
+        </div>
+      );
+    }
+  
+  // useEffect(() => {
+  //   if (state?.message) {
+  //     toast.success(state.message);
+  //     // Réinitialiser le champ image après succès
+  //     setTimeout(() => {
+  //       setImageUrl("");
+  //       if (fileInputRef.current) {
+  //         fileInputRef.current.value = "";
+  //       }
+  //     }, 0);
+  //   }
+  // }, [state]);
 
   return (
     <form

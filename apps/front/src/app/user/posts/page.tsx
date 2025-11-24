@@ -12,6 +12,7 @@ const UserPostPage = async ({ searchParams }: Props) => {
     page: page ? +page : 1,
     pageSize: DEFAULT_PAGE_SIZE,
   });
+
   return (
     <div>
       {!posts || !posts.length ? (

@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { CreatePostInput } from './dto/create-post.input';
 import { UpdatePostInput } from './dto/update-post.input';
 import { PrismaService } from 'src/prisma/prisma.service';
@@ -77,7 +77,7 @@ export class PostService {
   }) {
     return await this.prisma.post.findMany({
       orderBy: {
-        createdAt: 'desc', // 'desc' pour du plus récent au plus ancien
+        updatedAt: 'desc', // 'desc' pour du plus récent au plus ancien, tri global liste des posts
       },
       where: {
         author: {
@@ -88,6 +88,7 @@ export class PostService {
         id: true,
         content: true,
         createdAt: true,
+        updatedAt: true, // champ ajouter pout trier par date de mise a jour
         published: true,
         slug: true,
         title: true,
@@ -112,11 +113,51 @@ export class PostService {
     });
   }
 
-  update(id: number, updatePostInput: UpdatePostInput) {
-    return `This action updates a #${id} post`;
+  async update({
+    userId,
+    updatePostInput,
+  }: {
+    userId: number;
+    updatePostInput: UpdatePostInput;
+  }) {
+    const authorIdMatched = await this.prisma.post.findUnique({
+      where: { id: updatePostInput.postId, authorId: userId },
+    });
+
+    if (!authorIdMatched) throw new UnauthorizedException();
+    const { postId, ...data } = updatePostInput;
+    return await this.prisma.post.update({
+      where: {
+        id: updatePostInput.postId,
+      },
+      data: {
+        ...data,
+        updatedAt: new Date(), // ← S'assurer que c'est présent
+        tags: {
+          set: [],
+          connectOrCreate: (updatePostInput.tags ?? []).map((tag) => ({
+            where: { name: tag },
+            create: { name: tag },
+          })),
+        },
+      },
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} post`;
+  async delete({ postId, userId }: { postId: number; userId: number }) {
+    const authorIdMatched = await this.prisma.post.findUnique({
+      where: { id: postId, authorId: userId },
+    });
+
+    if (!authorIdMatched) throw new UnauthorizedException();
+
+    const result = await this.prisma.post.delete({
+      where: {
+        id: postId,
+        authorId: userId,
+      },
+    });
+
+    return !!result;
   }
 }

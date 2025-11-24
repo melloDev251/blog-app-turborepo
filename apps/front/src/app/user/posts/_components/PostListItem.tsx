@@ -20,8 +20,16 @@ const PostListItem = ({ post }: Props) => {
       </div>
 
       <p className="flex justify-center items-center">
-        {formatDateShort(post.createdAt)}
+        {formatDateShort(post.updatedAt)}
       </p>
+      {/* Afficher la date de modification (plus importante maintenant) */}
+      {/* <div className="flex flex-col justify-center items-center p-2">
+        <span className="text-xs text-gray-500 mb-1">Dernière modif</span>
+        <span className="text-sm font-medium">
+          {formatDateShort(post.updatedAt)}
+        </span>
+      </div> */}
+
       <div className="flex justify-center items-center">
         {post.published && <CheckIcon className="w-5" />}
       </div>

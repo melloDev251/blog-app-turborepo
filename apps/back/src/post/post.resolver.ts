@@ -66,13 +66,23 @@ export class PostResolver {
     return this.postService.userPostCount(userId);
   }
 
+  @UseGuards(JwtAuthGuard)
   @Mutation(() => Post)
-  updatePost(@Args('updatePostInput') updatePostInput: UpdatePostInput) {
-    return this.postService.update(updatePostInput.id, updatePostInput);
+  updatePost(
+    @Context() context,
+    @Args('updatePostInput') updatePostInput: UpdatePostInput,
+  ) {
+    const userId = context.req.user.id;
+    return this.postService.update({ userId, updatePostInput });
   }
 
-  @Mutation(() => Post)
-  removePost(@Args('id', { type: () => Int }) id: number) {
-    return this.postService.remove(id);
+  @UseGuards(JwtAuthGuard)
+  @Mutation(() => Boolean)
+  deletePost(
+    @Context() context,
+    @Args('postId', { type: () => Int }) postId: number,
+  ) {
+    const userId = context.req.user.id;
+    return this.postService.delete({ postId, userId });
   }
 }

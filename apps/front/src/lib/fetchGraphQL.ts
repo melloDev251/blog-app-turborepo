@@ -30,7 +30,7 @@ export const authFetchGraphQL = async (query: string, variables = {}) => {
       "Content-Type": "application/json",
       Authorization: `Bearer ${session?.accessToken}`,
     },
-    body: JSON.stringify({
+    body: JSON.stringify({  
       query,
       variables,
     }),
